@@ -30,7 +30,7 @@ app.use('/api/v1/note', require('./routes/note.route'));
 
 // Base route
 app.get('/', (req, res) => {
-    res.status(200).json({ msg: "Server up and running!" });
+    res.status(200).json({ msg: "Server up and running! Looks Greate" });
 });
 
 // Webhook route
