@@ -15,6 +15,44 @@ const swaggerOptions = {
                 url: 'http://localhost:4000', // Replace with your server URL
             },
         ],
+        components: {
+            securitySchemes: {
+                bearerAuth: {
+                    type: 'http',
+                    scheme: 'bearer',
+                    bearerFormat: 'JWT', // Optional, to specify that it's a JWT
+                },
+            },
+            schemas: {
+                Note: {
+                    type: 'object',
+                    properties: {
+                        id: {
+                            type: 'string',
+                            description: 'Unique identifier for the note',
+                        },
+                        title: {
+                            type: 'string',
+                            description: 'Title of the note',
+                        },
+                        content: {
+                            type: 'string',
+                            description: 'Content of the note',
+                        },
+                        user: {
+                            type: 'string',
+                            description: 'ID of the user who created the note',
+                        },
+                    },
+                    required: ['title', 'content'],
+                },
+            },
+        },
+        security: [
+            {
+                bearerAuth: [], // Apply this security scheme globally to all routes
+            },
+        ],
     },
     apis: ['./routes/*.js'], // Path to your route files
 };

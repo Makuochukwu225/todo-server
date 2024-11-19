@@ -1,0 +1,61 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Optional npm cache directory
+.npm
+
+# Optional Yarn cache directory
+.yarn/cache
+.pnp.*
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+
+# Optional pnpm cache directory
+.pnpm-store/
+
+# Environment variables
+.env
+.env.test
+.env.production
+.env.local
+.env.*.local
+
+# Next.js build output
+.next/
+out/
+
+# Nuxt.js build output
+.nuxt/
+dist/
+
+# Vuepress build output
+.vuepress/dist
+
+# Gatsby files
+.cache/
+public/
+
+# Temporary files
+tmp/
+temp/
+
+# Build output
+build/
+dist/
+out/
+coverage/
+
+# Typescript
+*.tsbuildinfo
+
+# Diagnos

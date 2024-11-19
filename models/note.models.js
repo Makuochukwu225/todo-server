@@ -1,17 +1,21 @@
 const mongoose = require('mongoose');
-const cardSchema = mongoose.Schema(
+const noteSchema = mongoose.Schema(
     {
-
-        cardId: {
+        noteTitle: {
             type: String,
-            unique: true,
             default: null,
+            required: true,
+        },
+        noteDescription: {
+            type: String,
+            default: null,
+            required: true,
         },
         user: {
             type: mongoose.Schema.Types.ObjectId,
-            ref: 'userModel',
+            ref: 'noteUsersModel',
         },
-        isUse: {
+        isComplete: {
             type: Boolean,
             default: false,
         },
@@ -23,4 +27,4 @@ const cardSchema = mongoose.Schema(
 
 
 
-module.exports = mongoose.model('cardModel', cardSchema);
+module.exports = mongoose.model('noteModel', noteSchema);
