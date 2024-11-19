@@ -15,7 +15,7 @@ const swaggerOptions = {
                 url: 'http://localhost:4000', // Replace with your server URL
             },
             {
-                url: 'https://todo-web-d8az.onrender.com',
+                url: 'https://todo-server-lyi9.onrender.com',
             }
         ],
         components: {
