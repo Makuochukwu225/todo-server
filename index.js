@@ -6,6 +6,8 @@ const socketIO = require('./helpers/server');
 const connectDb = require('./helpers/db');
 const setupSwagger = require('./helpers/swagger');
 
+
+
 const app = express();
 const server = http.createServer(app);
 
@@ -14,8 +16,8 @@ socketIO.init(server);
 
 // Middleware
 app.use(express.urlencoded({ extended: false }));
-app.use(express.json());
 app.use(cors());
+app.use(express.json());
 
 // Setup Swagger
 setupSwagger(app);

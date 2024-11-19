@@ -14,11 +14,14 @@ const swaggerOptions = {
             {
                 url: 'http://localhost:4000', // Replace with your server URL
             },
+            {
+                url: 'https://todo-web-d8az.onrender.com',
+            }
         ],
         components: {
             securitySchemes: {
                 bearerAuth: {
-                    type: 'http',
+                    type: 'https',
                     scheme: 'bearer',
                     bearerFormat: 'JWT', // Optional, to specify that it's a JWT
                 },
